@@ -156,8 +156,8 @@ export default function Vampire() {
         .vampire {
           color: darkgrey;
           font-size: 0.8rem;
-          margin-left: 0.5rem;
-          margin-right: 0.5rem;
+          margin-left: 0.2rem;
+          margin-right: 0.2rem;
         }
 
         code {

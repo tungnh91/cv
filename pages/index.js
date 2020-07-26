@@ -207,8 +207,8 @@ export default function Home() {
 
         .vampire {
           font-size: 0.8rem;
-          margin-left: 0.5rem;
-          margin-right: 0.5rem;
+          margin-left: 0.2rem;
+          margin-right: 0.2rem;
         }
 
         footer {
