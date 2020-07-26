@@ -1,63 +1,48 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Tim Nguyen</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className="title">Tim Nguyen</h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          <code>Software Engineer</code>
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://linkedin.com/in/timothytungnguyen" className="card">
+            <img src="/linkedin.svg" alt="LinkedIn"></img>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="https://github.com/tungnh91" className="card">
+            <img src="/github.svg" alt="GitHub"></img>
           </a>
 
+          <a href="https://medium.com/@9447" className="card">
+            <img src="/medium.svg" alt="Medium"></img>
+          </a>
+
+          <a href="https://twitter.com/t__ng" className="card">
+            <img src="/twitter.svg" alt="twitter"></img>
+          </a>
+
+          <a href="mailto:tungnh91@gmail.com" className="card">
+            <img src="/mail.svg" alt="mail"></img>
+          </a>
           <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
+            href="https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing"
             className="card"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <img src="/resume.svg" alt="resume"></img>
           </a>
         </div>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {
@@ -74,25 +59,6 @@ export default function Home() {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -152,7 +118,7 @@ export default function Home() {
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
-          text-align: left;
+          text-align: center;
           color: inherit;
           text-decoration: none;
           border: 1px solid #eaeaea;
@@ -164,7 +130,7 @@ export default function Home() {
         .card:focus,
         .card:active {
           color: #0070f3;
-          border-color: #0070f3;
+          border-color: blue;
         }
 
         .card h3 {
@@ -178,8 +144,8 @@ export default function Home() {
           line-height: 1.5;
         }
 
-        .logo {
-          height: 1em;
+        .card img {
+          height: 3rem;
         }
 
         @media (max-width: 600px) {
@@ -205,5 +171,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
