@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const config = { amp: true };
 
-export default function Home() {
+export default function Vampire() {
   return (
     <div className="container">
       <Head>
@@ -14,9 +14,7 @@ export default function Home() {
       <main>
         <h1 className="title">Tim Nguyen</h1>
 
-        <p className="description">
-          <code>Software Engineer</code>
-        </p>
+        <p className="description">Software Engineer</p>
 
         <div className="grid">
           <a
@@ -87,22 +85,23 @@ export default function Home() {
 
       <footer>
         <p className="vampire">Vampire?</p>
-        <Link href="/vampire">
+        <p className="vampire">Si</p>
+        <Link href="/">
           <a>
             <amp-img
               className="vampire"
-              src="/darkmodeoff.svg"
+              src="/darkmodeon.svg"
               alt="resume"
               width="3rem"
               height="3rem"
             ></amp-img>
           </a>
         </Link>
-        <p className="vampire">No</p>
       </footer>
 
       <style jsx>{`
         .container {
+          background: black;
           min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
@@ -137,6 +136,7 @@ export default function Home() {
         }
 
         .title {
+          color: grey;
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
@@ -144,6 +144,7 @@ export default function Home() {
 
         .title,
         .description {
+          color: darkgrey;
           text-align: center;
         }
 
@@ -152,8 +153,15 @@ export default function Home() {
           font-size: 1.5rem;
         }
 
+        .vampire {
+          color: darkgrey;
+          font-size: 0.8rem;
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+
         code {
-          background: #fasfafa;
+          background: #fafafa;
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
@@ -201,14 +209,10 @@ export default function Home() {
           line-height: 1.5;
         }
 
-        .card amp-img {
+        amp-img {
           height: 3rem;
-        }
-
-        .vampire {
-          font-size: 0.8rem;
-          margin-left: 0.5rem;
-          margin-right: 0.5rem;
+          -webkit-filter: invert(0.75);
+          filter: invert(0.75);
         }
 
         footer {
