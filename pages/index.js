@@ -18,7 +18,11 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <a href="https://linkedin.com/in/timothytungnguyen" className="card">
+          <a
+            target="_blank"
+            href="https://linkedin.com/in/timothytungnguyen"
+            className="card"
+          >
             <amp-img
               src="/linkedin.svg"
               alt="LinkedIn"
@@ -27,7 +31,11 @@ export default function Home() {
             ></amp-img>
           </a>
 
-          <a href="https://github.com/tungnh91" className="card">
+          <a
+            target="_blank"
+            href="https://github.com/tungnh91"
+            className="card"
+          >
             <amp-img
               src="/github.svg"
               alt="github"
@@ -36,7 +44,7 @@ export default function Home() {
             ></amp-img>
           </a>
 
-          <a href="https://medium.com/@9447" className="card">
+          <a target="_blank" href="https://medium.com/@9447" className="card">
             <amp-img
               src="/medium.svg"
               alt="medium"
@@ -45,7 +53,7 @@ export default function Home() {
             ></amp-img>
           </a>
 
-          <a href="https://twitter.com/t__ng" className="card">
+          <a target="_blank" href="https://twitter.com/t__ng" className="card">
             <amp-img
               src="/twitter.svg"
               alt="twitter"
@@ -54,7 +62,7 @@ export default function Home() {
             ></amp-img>
           </a>
 
-          <a href="mailto:tungnh91@gmail.com" className="card">
+          <a target="_blank" href="mailto:tungnh91@gmail.com" className="card">
             <amp-img
               src="/mail.svg"
               alt="mail"
