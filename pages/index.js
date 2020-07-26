@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+export const config = { amp: true };
+
 export default function Home() {
   return (
     <div className="container">
@@ -17,29 +19,59 @@ export default function Home() {
 
         <div className="grid">
           <a href="https://linkedin.com/in/timothytungnguyen" className="card">
-            <img src="/linkedin.svg" alt="LinkedIn"></img>
+            <amp-img
+              src="/linkedin.svg"
+              alt="LinkedIn"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
 
           <a href="https://github.com/tungnh91" className="card">
-            <img src="/github.svg" alt="GitHub"></img>
+            <amp-img
+              src="/github.svg"
+              alt="github"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
 
           <a href="https://medium.com/@9447" className="card">
-            <img src="/medium.svg" alt="Medium"></img>
+            <amp-img
+              src="/medium.svg"
+              alt="medium"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
 
           <a href="https://twitter.com/t__ng" className="card">
-            <img src="/twitter.svg" alt="twitter"></img>
+            <amp-img
+              src="/twitter.svg"
+              alt="twitter"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
 
           <a href="mailto:tungnh91@gmail.com" className="card">
-            <img src="/mail.svg" alt="mail"></img>
+            <amp-img
+              src="/mail.svg"
+              alt="mail"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
           <a
             href="https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing"
             className="card"
           >
-            <img src="/resume.svg" alt="resume"></img>
+            <amp-img
+              src="/resume.svg"
+              alt="resume"
+              width="3rem"
+              height="3rem"
+            ></amp-img>
           </a>
         </div>
       </main>
@@ -144,7 +176,7 @@ export default function Home() {
           line-height: 1.5;
         }
 
-        .card img {
+        .card amp-img {
           height: 3rem;
         }
 
