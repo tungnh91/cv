@@ -54,15 +54,6 @@ export default function Home() {
             ></amp-img>
           </a>
 
-          <a target="_blank" href="https://twitter.com/t__ng" className="card">
-            <amp-img
-              src="/twitter.svg"
-              alt="twitter"
-              width="3rem"
-              height="3rem"
-            ></amp-img>
-          </a>
-
           <a target="_blank" href="mailto:tungnh91@gmail.com" className="card">
             <amp-img
               src="/mail.svg"
