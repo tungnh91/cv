@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const config = { amp: true };
 
-export default function Vampire() {
+export default function Home() {
   return (
     <div className="container">
       <Head>
@@ -14,7 +14,9 @@ export default function Vampire() {
       <main>
         <h1 className="title">Tim Nguyen</h1>
 
-        <p className="description">Software Engineer</p>
+        <p className="description">
+          <code>Software Engineer</code>
+        </p>
 
         <div className="grid">
           <a
@@ -28,6 +30,9 @@ export default function Vampire() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>LinkedIn</code>
+            </p>
           </a>
 
           <a
@@ -41,6 +46,9 @@ export default function Vampire() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Github</code>
+            </p>
           </a>
 
           <a target="_blank" href="https://medium.com/@9447" className="card">
@@ -50,6 +58,9 @@ export default function Vampire() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Medium</code>
+            </p>
           </a>
 
           <a target="_blank" href="mailto:tungnh91@gmail.com" className="card">
@@ -59,6 +70,9 @@ export default function Vampire() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Email</code>
+            </p>
           </a>
           <a
             href="https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing"
@@ -70,13 +84,15 @@ export default function Vampire() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Resume</code>
+            </p>
           </a>
         </div>
       </main>
 
       <footer>
-        <p className="vampire">Vampire?</p>
-        <p className="vampire">Yes</p>
+        <p className="vampire">🌙</p>
         <Link href="/">
           <a>
             <amp-img
@@ -149,15 +165,6 @@ export default function Vampire() {
           font-size: 0.8rem;
           margin-left: 0.2rem;
           margin-right: 0.2rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
         .grid {

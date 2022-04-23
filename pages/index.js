@@ -30,6 +30,9 @@ export default function Home() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>LinkedIn</code>
+            </p>
           </a>
 
           <a
@@ -43,6 +46,9 @@ export default function Home() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Github</code>
+            </p>
           </a>
 
           <a target="_blank" href="https://medium.com/@9447" className="card">
@@ -52,6 +58,9 @@ export default function Home() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Medium</code>
+            </p>
           </a>
 
           <a target="_blank" href="mailto:tungnh91@gmail.com" className="card">
@@ -61,6 +70,9 @@ export default function Home() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Email</code>
+            </p>
           </a>
           <a
             href="https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing"
@@ -72,12 +84,14 @@ export default function Home() {
               width="3rem"
               height="3rem"
             ></amp-img>
+            <p>
+              <code>Resume</code>
+            </p>
           </a>
         </div>
       </main>
 
       <footer>
-        <p className="vampire">Vampire?</p>
         <Link href="/vampire">
           <a>
             <amp-img
@@ -89,7 +103,7 @@ export default function Home() {
             ></amp-img>
           </a>
         </Link>
-        <p className="vampire">No</p>
+        <p className="vampire">🌞</p>
       </footer>
 
       <style jsx>{`
@@ -115,7 +129,7 @@ export default function Home() {
           color: inherit;
           text-decoration: none;
         }
-
+        
         .title a {
           color: #0070f3;
           text-decoration: none;
