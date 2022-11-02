@@ -40,17 +40,17 @@ export default function Home() {
           <div className="flex gap-10 flex-col md:flex-row">
             <BlogPostCard
               title="LinkedIn"
-              link="https://linkedin.com"
+              link="https://linkedin.com/in/timothytungnguyen"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
               title="AngelList"
-              link="https://github.com"
+              link="https://angel.co/u/timnguyen"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
               title="Github"
-              link="https://github.com"
+              link="https://github.com/tungnh91"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
           </div>
@@ -60,17 +60,17 @@ export default function Home() {
           <div className="flex gap-10 flex-col md:flex-row">
             <BlogPostCard
               title="Email"
-              link="tungnh91@gmail.com"
+              link="mailto:tungnh91@gmail.com"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
             <BlogPostCard
               title="Resume"
-              link="https://medium.com"
+              link="https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing"
               gradient="from-[#9333EA] via-[#3B82F6] to-[#6EE7B7]"
             />
             <BlogPostCard
               title="Medium"
-              link="https://medium.com"
+              link="https://medium.com/@9447"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
           </div>
