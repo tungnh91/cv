@@ -5,6 +5,7 @@ export default function BlogPostCard({ title, link, gradient }) {
     <a
       href={link}
       target="_blank"
+      rel="noreferrer"
       className={cn(
         'transform hover:scale-[1.01] transition-all',
         'rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1',
