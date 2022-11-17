@@ -16,7 +16,7 @@ export default function Home() {
                 Tim Nguyen
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Sr. Software Engineer
+                Software Engineer
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 I design and build highly scalable, performant, and reliable software products.
