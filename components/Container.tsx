@@ -53,7 +53,7 @@ export default function Container(props) {
           <button
             aria-label="Toggle dark mode"
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/80 text-gray-700 shadow-sm backdrop-blur transition-all hover:border-brand-500/50 hover:bg-brand-50 hover:text-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-800/80 dark:text-gray-200 dark:hover:border-brand-500/60 dark:hover:bg-brand-900/30 dark:hover:text-brand-400"
+            className="glass-icon-button"
             onClick={() =>
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }

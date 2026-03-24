@@ -8,15 +8,13 @@ import GravityField from '../components/GravityField';
 const links = [
   {
     title: 'LinkedIn',
-    link: 'https://linkedin.com/in/timothytungnguyen'
+    link: 'https://linkedin.com/in/timothytungnguyen',
+    icon: 'profile'
   },
   {
-    title: 'GitHub',
-    link: 'https://github.com/tungnh91'
-  },
-  {
-    title: 'Resume',
-    link: 'https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing'
+    title: 'Résumé',
+    link: 'https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing',
+    icon: 'doc'
   }
 ];
 
@@ -38,9 +36,6 @@ export default function Home() {
             <div className="relative z-20 p-8 sm:p-10">
               <div className="flex flex-col-reverse gap-8 sm:flex-row sm:items-center sm:justify-between">
                 <div className="max-w-xl">
-                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-brand-700 dark:text-brand-500">
-                    Software Engineer
-                  </p>
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
                     Tim Nguyen
                   </h1>
@@ -72,9 +67,9 @@ export default function Home() {
             <span className="h-px w-full bg-gradient-to-r from-transparent via-brand-200 to-transparent dark:via-brand-800" />
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {links.map(({ title, link }) => (
-              <BlogPostCard key={title} title={title} link={link} />
+          <div className="mx-auto grid w-full max-w-2xl gap-5 md:grid-cols-2">
+            {links.map(({ title, link, icon }) => (
+              <BlogPostCard key={title} title={title} link={link} icon={icon} />
             ))}
           </div>
         </section>

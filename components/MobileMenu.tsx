@@ -32,7 +32,7 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className={cn(styles.burger, 'visible md:hidden')}
+        className={cn(styles.burger, 'glass-icon-button visible md:hidden')}
         aria-label="Toggle menu"
         type="button"
         onClick={toggleMenu}
@@ -61,7 +61,7 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="absolute h-5 w-5 text-gray-900 dark:text-white"
+      className="absolute h-5 w-5"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -89,7 +89,7 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="absolute h-5 w-5 text-gray-900 dark:text-white"
+      className="absolute h-5 w-5"
       viewBox="0 0 24 24"
       width="24"
       height="24"

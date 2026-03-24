@@ -16,11 +16,28 @@ export default function NotFound() {
           The page you were looking for wandered off. Let&apos;s get you back to
           familiar territory.
         </p>
-        <Link
-          href="/"
-          className="rounded-full bg-brand-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-800 dark:bg-brand-500 dark:text-gray-900 dark:hover:bg-brand-400"
-        >
-          Back home
+        <Link href="/" className="glass-button group">
+          <span>Back home</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.8}
+              d="M5 12h14"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.8}
+              d="m13 6 6 6-6 6"
+            />
+          </svg>
         </Link>
       </div>
     </Container>
