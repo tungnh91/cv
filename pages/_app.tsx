@@ -12,7 +12,11 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <ThemeProvider attribute="class">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+      >
         <main className={interVariable.className}>
           <Component {...pageProps} />
         </main>

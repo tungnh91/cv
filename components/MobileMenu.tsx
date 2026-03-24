@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import Link from 'next/link';
 import useDelayedRender from 'use-delayed-render';
 import { useState, useEffect } from 'react';
 import styles from 'styles/mobile-menu.module.css';
@@ -45,15 +44,14 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
+            'absolute flex flex-col bg-white/95 backdrop-blur dark:bg-gray-900/95',
             isMenuRendered && styles.menuRendered
           )}
         >
           <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            className="border-b border-gray-200 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-white"
             style={{ transitionDelay: '150ms' }}
-          >
-          </li>
+          />
         </ul>
       )}
     </>
@@ -63,7 +61,7 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
+      className="absolute h-5 w-5 text-gray-900 dark:text-white"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -91,7 +89,7 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
+      className="absolute h-5 w-5 text-gray-900 dark:text-white"
       viewBox="0 0 24 24"
       width="24"
       height="24"

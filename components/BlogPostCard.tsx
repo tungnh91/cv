@@ -1,21 +1,43 @@
-import cn from 'classnames';
-
-export default function BlogPostCard({ title, link, gradient }) {
+export default function BlogPostCard({ title, link }) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noreferrer"
-      className={cn(
-        'transform hover:scale-[1.01] transition-all',
-        'rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1',
-        gradient
-      )}
+      className="group rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-[0_20px_45px_-36px_rgba(18,114,76,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-[0_28px_65px_-36px_rgba(18,114,76,0.45)] dark:border-gray-700 dark:bg-gray-800/80 dark:shadow-[0_24px_60px_-42px_rgba(62,207,142,0.16)] dark:hover:border-brand-500/70 dark:hover:shadow-[0_32px_70px_-36px_rgba(62,207,142,0.3)]"
     >
-      <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
-          <h3 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-800 dark:text-gray-400 tracking-tight">
+      <div className="flex h-full items-center justify-between gap-4">
+        <div>
+          <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-700 dark:text-brand-500">
+            Open
+          </p>
+          <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h3>
+        </div>
+
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand-200 bg-brand-50 text-brand-700 transition-all duration-300 group-hover:border-brand-300 group-hover:bg-brand-100 group-hover:text-brand-800 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-400 dark:group-hover:border-brand-700 dark:group-hover:bg-brand-900/70 dark:group-hover:text-brand-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            className="h-5 w-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.8}
+              d="M7 17L17 7"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.8}
+              d="M9 7h8v8"
+            />
+          </svg>
+        </span>
       </div>
     </a>
   );

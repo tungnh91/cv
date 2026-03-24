@@ -1,52 +1,30 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import NextLink from 'next/link';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import NextLink from 'next/link';
-import cn from 'classnames';
-
-
-function NavItem({ href, text }) {
-  const router = useRouter();
-  const isActive = router.asPath === href;
-
-  return (
-    <NextLink
-      href={href}
-      className={cn(
-        isActive
-          ? 'font-semibold text-gray-800 dark:text-gray-200'
-          : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
-      )}
-    >
-      <span className="capsize">{text}</span>
-    </NextLink>
-  );
-}
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
-  const router = useRouter();
   const meta = {
     title: 'Tim Nguyen',
-    description: `Sr. Software Engineer`,
+    description: 'Sr. Software Engineer',
     type: 'website',
     ...customMeta
   };
+  const themeColor = resolvedTheme === 'light' ? '#f5f8f5' : '#050706';
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <div className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
+        <meta name="theme-color" content={themeColor} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Tim Nguyen" />
         <meta property="og:description" content={meta.description} />
@@ -60,17 +38,24 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+
+      <div className="px-6 sm:px-8">
+        <nav className="mx-auto flex w-full max-w-3xl items-center justify-between gap-4 pb-10 pt-8 sm:pb-16">
           <a href="#skip" className="skip-nav">
             Skip to content
           </a>
-          <div className="ml-[-0.60rem]">
-          </div>
+
+          <NextLink
+            href="/"
+            className="rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-sm font-semibold tracking-tight text-gray-700 shadow-sm backdrop-blur transition-all hover:border-brand-500/40 hover:text-brand-700 dark:border-gray-700 dark:bg-gray-800/80 dark:text-gray-200 dark:hover:border-brand-500/60 dark:hover:text-brand-400"
+          >
+            tim.nguyen
+          </NextLink>
+
           <button
-            aria-label="Toggle Dark Mode"
+            aria-label="Toggle dark mode"
             type="button"
-            className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/80 text-gray-700 shadow-sm backdrop-blur transition-all hover:border-brand-500/50 hover:bg-brand-50 hover:text-brand-700 focus:outline-none focus:ring-4 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-800/80 dark:text-gray-200 dark:hover:border-brand-500/60 dark:hover:bg-brand-900/30 dark:hover:text-brand-400"
             onClick={() =>
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
@@ -81,7 +66,7 @@ export default function Container(props) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                className="w-5 h-5 text-gray-800 dark:text-gray-200"
+                className="h-5 w-5"
               >
                 {resolvedTheme === 'dark' ? (
                   <path
@@ -103,9 +88,10 @@ export default function Container(props) {
           </button>
         </nav>
       </div>
+
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        className="flex flex-col justify-center bg-gray-50 px-6 pb-8 dark:bg-gray-900 sm:px-8"
       >
         {children}
       </main>
