@@ -68,12 +68,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-200 to-transparent dark:via-brand-800" />
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-700 dark:text-brand-500">
-              Connect
-            </span>
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-brand-200 to-transparent dark:via-brand-800" />
+          <div className="flex items-center">
+            <span className="h-px w-full bg-gradient-to-r from-transparent via-brand-200 to-transparent dark:via-brand-800" />
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">

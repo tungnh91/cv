@@ -8,9 +8,6 @@ export default function BlogPostCard({ title, link }) {
     >
       <div className="flex h-full items-center justify-between gap-4">
         <div>
-          <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-brand-700 dark:text-brand-500">
-            Open
-          </p>
           <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h3>

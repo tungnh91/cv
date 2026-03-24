@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import NextLink from 'next/link';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
@@ -40,17 +39,10 @@ export default function Container(props) {
       </Head>
 
       <div className="px-6 sm:px-8">
-        <nav className="mx-auto flex w-full max-w-3xl items-center justify-between gap-4 pb-10 pt-8 sm:pb-16">
+        <nav className="mx-auto flex w-full max-w-3xl items-center justify-end gap-4 pb-10 pt-8 sm:pb-16">
           <a href="#skip" className="skip-nav">
             Skip to content
           </a>
-
-          <NextLink
-            href="/"
-            className="rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-sm font-semibold tracking-tight text-gray-700 shadow-sm backdrop-blur transition-all hover:border-brand-500/40 hover:text-brand-700 dark:border-gray-700 dark:bg-gray-800/80 dark:text-gray-200 dark:hover:border-brand-500/60 dark:hover:text-brand-400"
-          >
-            tim.nguyen
-          </NextLink>
 
           <button
             aria-label="Toggle dark mode"
