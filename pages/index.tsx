@@ -16,18 +16,6 @@ const links = [
   {
     title: 'Resume',
     link: 'https://docs.google.com/document/d/1uAT9FdEBqnd4Eil6w2MVxv2NrF6hjOeYRSZEO6y6Tw0/edit?usp=sharing'
-  },
-  {
-    title: 'Email',
-    link: 'mailto:tungnh91@gmail.com'
-  },
-  {
-    title: 'Medium',
-    link: 'https://medium.com/@9447'
-  },
-  {
-    title: 'AngelList',
-    link: 'https://angel.co/u/timnguyen'
   }
 ];
 
