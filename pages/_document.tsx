@@ -4,7 +4,11 @@ export default function Document(props) {
   return (
     <Html lang="en">
       <Head>
-        <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
+        <link
+          href="/static/favicons/favicon-32x32.png"
+          rel="shortcut icon"
+          type="image/png"
+        />
         <link href="/static/favicons/site.webmanifest" rel="manifest" />
         <link
           href="/static/favicons/apple-touch-icon.png"
@@ -23,17 +27,8 @@ export default function Document(props) {
           sizes="16x16"
           type="image/png"
         />
-        <link
-          color="#12724c"
-          href="/static/favicons/safari-pinned-tab.svg"
-          rel="mask-icon"
-        />
         <meta content="#12724c" name="msapplication-TileColor" />
         <meta content="light dark" name="color-scheme" />
-        <meta
-          content="/static/favicons/browserconfig.xml"
-          name="msapplication-config"
-        />
         <meta content="14d2e73487fa6c71" name="yandex-verification" />
         <meta
           content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
