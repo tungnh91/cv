@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
+import LiquidBubbleBackground from './LiquidBubbleBackground';
+
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -21,7 +23,9 @@ export default function Container(props) {
   const themeColor = resolvedTheme === 'light' ? '#f5f8f5' : '#050706';
 
   return (
-    <div className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="relative isolate min-h-screen overflow-hidden bg-gray-50 text-gray-900 dark:bg-[#050706] dark:text-white">
+      <LiquidBubbleBackground />
+
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -44,7 +48,7 @@ export default function Container(props) {
         )}
       </Head>
 
-      <div className="px-6 sm:px-8">
+      <div className="relative z-10 px-6 sm:px-8">
         <nav className="mx-auto flex w-full max-w-3xl items-center justify-end gap-4 pb-10 pt-8 sm:pb-16">
           <a href="#skip" className="skip-nav">
             Skip to content
@@ -89,7 +93,7 @@ export default function Container(props) {
 
       <main
         id="skip"
-        className="flex flex-col justify-center bg-gray-50 px-6 pb-8 dark:bg-gray-900 sm:px-8"
+        className="relative z-10 flex flex-col justify-center px-6 pb-8 sm:px-8"
       >
         {children}
       </main>

@@ -39,7 +39,7 @@ export default function Document(props) {
           name="robots"
         />
       </Head>
-      <body className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
+      <body className="bg-gray-50 text-gray-900 dark:bg-[#050706] dark:text-white">
         <Main />
         <NextScript />
       </body>
