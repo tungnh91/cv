@@ -88,7 +88,7 @@ export default function LiquidBubbleBackground() {
     let width = 0;
     let height = 0;
     let animationFrame = 0;
-    let resizeTimer: ReturnType<typeof setTimeout> | undefined;
+    let resizeTimer: number | undefined;
     let reducedMotion = false;
     let bubbles: Bubble[] = [];
     let lastPointerMove = 0;

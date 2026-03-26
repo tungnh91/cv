@@ -1,7 +1,7 @@
-const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./pages/**/*.tsx', './components/**/*.tsx', './layouts/**/*.tsx'],
+  content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -34,82 +34,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
-      },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.700'),
-            a: {
-              color: theme('colors.brand.700'),
-              '&:hover': {
-                color: theme('colors.brand.600')
-              },
-              code: { color: theme('colors.brand.700') }
-            },
-            blockquote: {
-              borderLeftColor: theme('colors.brand.200'),
-              color: theme('colors.gray.600')
-            },
-            'h1,h2,h3,h4': {
-              color: theme('colors.gray.900'),
-              'scroll-margin-top': spacing[32]
-            },
-            thead: {
-              borderBottomColor: theme('colors.gray.200')
-            },
-            code: { color: theme('colors.brand.700') },
-            'blockquote p:first-of-type::before': false,
-            'blockquote p:last-of-type::after': false
-          }
-        },
-        dark: {
-          css: {
-            color: theme('colors.gray.200'),
-            a: {
-              color: theme('colors.brand.400'),
-              '&:hover': {
-                color: theme('colors.brand.300')
-              },
-              code: { color: theme('colors.brand.400') }
-            },
-            blockquote: {
-              borderLeftColor: theme('colors.brand.800'),
-              color: theme('colors.gray.300')
-            },
-            'h1,h2,h3,h4': {
-              color: theme('colors.white'),
-              'scroll-margin-top': spacing[32]
-            },
-            hr: { borderColor: theme('colors.gray.700') },
-            ol: {
-              li: {
-                '&:before': { color: theme('colors.gray.500') }
-              }
-            },
-            ul: {
-              li: {
-                '&:before': { backgroundColor: theme('colors.gray.500') }
-              }
-            },
-            strong: { color: theme('colors.white') },
-            thead: {
-              th: {
-                color: theme('colors.white')
-              },
-              borderBottomColor: theme('colors.gray.700')
-            },
-            tbody: {
-              tr: {
-                borderBottomColor: theme('colors.gray.800')
-              }
-            }
-          }
-        }
-      })
+      }
     }
-  },
-  variants: {
-    typography: ['dark']
-  },
-  plugins: [require('@tailwindcss/typography')]
+  }
 };

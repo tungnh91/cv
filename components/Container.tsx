@@ -1,16 +1,33 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import type { PropsWithChildren } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-import LiquidBubbleBackground from './LiquidBubbleBackground';
+import LiquidBubbleBackground from 'components/LiquidBubbleBackground';
 
-export default function Container(props) {
+type ContainerMeta = {
+  title?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: string;
+  url?: string;
+  date?: string;
+};
+
+type ContainerProps = PropsWithChildren<ContainerMeta>;
+
+export default function Container({
+  children,
+  ...customMeta
+}: ContainerProps) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  const { children, ...customMeta } = props;
   const meta = {
     title: 'Tim Nguyen',
     description: 'Software Engineer',
@@ -20,6 +37,7 @@ export default function Container(props) {
     url: 'https://itstimn.com',
     ...customMeta
   };
+
   const themeColor = resolvedTheme === 'light' ? '#f5f8f5' : '#050706';
 
   return (
@@ -43,9 +61,9 @@ export default function Container(props) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         <meta name="twitter:image:alt" content={meta.imageAlt} />
-        {meta.date && (
+        {meta.date ? (
           <meta property="article:published_time" content={meta.date} />
-        )}
+        ) : null}
       </Head>
 
       <div className="relative z-10 px-6 sm:px-8">
@@ -62,7 +80,7 @@ export default function Container(props) {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
           >
-            {mounted && (
+            {mounted ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -86,7 +104,7 @@ export default function Container(props) {
                   />
                 )}
               </svg>
-            )}
+            ) : null}
           </button>
         </nav>
       </div>
