@@ -1,4 +1,16 @@
-export default function BlogPostCard({ title, link, icon }) {
+type ExternalLinkCardIcon = 'profile' | 'doc' | 'code';
+
+type ExternalLinkCardProps = {
+  title: string;
+  link: string;
+  icon: ExternalLinkCardIcon;
+};
+
+export default function ExternalLinkCard({
+  title,
+  link,
+  icon
+}: ExternalLinkCardProps) {
   return (
     <a
       href={link}
@@ -31,7 +43,7 @@ export default function BlogPostCard({ title, link, icon }) {
   );
 }
 
-function LeadingIcon({ icon }) {
+function LeadingIcon({ icon }: { icon: ExternalLinkCardIcon }) {
   switch (icon) {
     case 'profile':
       return (

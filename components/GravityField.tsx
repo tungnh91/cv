@@ -53,7 +53,7 @@ export default function GravityField({
     let my = -1;
     let mouseIn = false;
     let animationFrame = 0;
-    let resizeTimer: ReturnType<typeof setTimeout> | undefined;
+    let resizeTimer: number | undefined;
     let particles: Particle[] = [];
 
     function initParticles() {
