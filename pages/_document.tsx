@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="dark" suppressHydrationWarning>
       <Head>
         <link
           href="/static/favicons/favicon-32x32.png"
@@ -28,7 +28,7 @@ export default function Document() {
           type="image/png"
         />
         <meta content="#12724c" name="msapplication-TileColor" />
-        <meta content="light dark" name="color-scheme" />
+        <meta content="dark light" name="color-scheme" />
         <meta content="14d2e73487fa6c71" name="yandex-verification" />
         <meta
           content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
