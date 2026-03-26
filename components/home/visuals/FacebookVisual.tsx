@@ -1,8 +1,14 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  COLORS,
+  EXPERIENCE_VISUAL_CLASS,
+  VISUAL_VARS
+} from './constants';
 
 export default function FacebookVisual() {
   return (
-    <svg viewBox="0 0 320 120" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 120" className={EXPERIENCE_VISUAL_CLASS}>
       <text
         x="160"
         y="16"
@@ -21,7 +27,7 @@ export default function FacebookVisual() {
         cy="74"
         r="38"
         fill="none"
-        stroke={COLORS.blue}
+        stroke={VISUAL_VARS.blue}
         strokeWidth="9"
         strokeLinecap="butt"
         strokeDasharray="236.4 238.8"
@@ -35,7 +41,7 @@ export default function FacebookVisual() {
         fontFamily={CHART_SANS}
         fontSize="12"
         fontWeight="600"
-        fill={COLORS.blueLight}
+        fill={VISUAL_VARS.blue}
       >
         99.9999%
       </text>
@@ -55,15 +61,15 @@ export default function FacebookVisual() {
       </text>
 
       {[
-        { y: 52, label: 'Server A', width: 72, fill: COLORS.blue, opacity: 0.56 },
+        { y: 52, label: 'Server A', width: 72, fill: VISUAL_VARS.blue, opacity: 0.6 },
         { y: 69, label: 'Server B', width: 50, fill: COLORS.red, opacity: 0.62 },
-        { y: 86, label: 'Server C', width: 78, fill: COLORS.tealLight, opacity: 0.62 }
+        { y: 86, label: 'Server C', width: 78, fill: VISUAL_VARS.teal, opacity: 0.66 }
       ].map((bar) => (
         <g key={bar.label}>
           <text x="170" y={bar.y + 2} fontFamily={CHART_MONO} fontSize="10" fill="currentColor">
             {bar.label}
           </text>
-          <rect x="218" y={bar.y - 8} width="78" height="10" rx="3" fill={COLORS.blue} fillOpacity="0.18" />
+          <rect x="218" y={bar.y - 8} width="78" height="10" rx="3" fill={VISUAL_VARS.blue} fillOpacity="0.18" />
           <rect
             x="218"
             y={bar.y - 8}

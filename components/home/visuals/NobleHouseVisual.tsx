@@ -1,8 +1,13 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  EXPERIENCE_VISUAL_CLASS,
+  VISUAL_VARS
+} from './constants';
 
 export default function NobleHouseVisual() {
   return (
-    <svg viewBox="0 0 320 110" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 110" className={EXPERIENCE_VISUAL_CLASS}>
       <text
         x="160"
         y="16"
@@ -17,13 +22,13 @@ export default function NobleHouseVisual() {
 
       <polygon
         points="10,90 50,80 90,72 130,60 170,50 210,40 260,28 300,20 300,98 10,98"
-        fill={COLORS.green}
+        fill={VISUAL_VARS.green}
         fillOpacity="0.1"
       />
       <polyline
         points="10,90 50,80 90,72 130,60 170,50 210,40 260,28 300,20"
         fill="none"
-        stroke={COLORS.green}
+        stroke={VISUAL_VARS.green}
         strokeWidth="1.8"
       />
 
@@ -39,7 +44,7 @@ export default function NobleHouseVisual() {
           cx={dot.cx}
           cy={dot.cy}
           r={dot.r}
-          fill={COLORS.green}
+          fill={VISUAL_VARS.green}
           fillOpacity={index === 4 ? 1 : 0.6}
         />
       ))}
@@ -55,7 +60,7 @@ export default function NobleHouseVisual() {
         </text>
       ))}
 
-      <text x="288" y="18" fontFamily={CHART_MONO} fontSize="10" fill={COLORS.green}>
+      <text x="288" y="18" fontFamily={CHART_MONO} fontSize="10" fill={VISUAL_VARS.green}>
         ↑ CTR
       </text>
     </svg>

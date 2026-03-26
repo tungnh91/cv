@@ -1,4 +1,9 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  COLORS,
+  EXPERIENCE_VISUAL_CLASS
+} from './constants';
 
 export default function AppleVisual() {
   const topRow = [
@@ -15,7 +20,7 @@ export default function AppleVisual() {
   ];
 
   return (
-    <svg viewBox="0 0 320 110" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 110" className={EXPERIENCE_VISUAL_CLASS}>
       <text
         x="160"
         y="16"

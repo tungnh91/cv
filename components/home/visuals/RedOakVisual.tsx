@@ -1,4 +1,9 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  EXPERIENCE_VISUAL_CLASS,
+  VISUAL_VARS
+} from './constants';
 
 export default function RedOakVisual() {
   const claims = [
@@ -8,18 +13,18 @@ export default function RedOakVisual() {
   ];
 
   const models = [
-    { cx: 92, cy: 34, label: 'M1', stroke: COLORS.purpleLight },
-    { cx: 228, cy: 34, label: 'M2', stroke: COLORS.blueLight },
-    { cx: 92, cy: 106, label: 'M3', stroke: COLORS.tealLight },
-    { cx: 228, cy: 106, label: 'M4', stroke: COLORS.purpleLight }
+    { cx: 92, cy: 34, label: 'M1', stroke: VISUAL_VARS.purple },
+    { cx: 228, cy: 34, label: 'M2', stroke: VISUAL_VARS.blue },
+    { cx: 92, cy: 106, label: 'M3', stroke: VISUAL_VARS.teal },
+    { cx: 228, cy: 106, label: 'M4', stroke: VISUAL_VARS.purple }
   ];
 
   return (
-    <svg viewBox="0 0 320 132" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 132" className={EXPERIENCE_VISUAL_CLASS}>
       <defs>
         <radialGradient id="redoak-core" cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stopColor={COLORS.purpleLight} stopOpacity="0.3" />
-          <stop offset="100%" stopColor={COLORS.purple} stopOpacity="0.02" />
+          <stop offset="0%" stopColor={VISUAL_VARS.purple} stopOpacity="0.3" />
+          <stop offset="100%" stopColor={VISUAL_VARS.purple} stopOpacity="0.02" />
         </radialGradient>
       </defs>
 
@@ -35,8 +40,8 @@ export default function RedOakVisual() {
         Council of models consensus
       </text>
 
-      <ellipse cx="160" cy="70" rx="86" ry="34" fill="none" stroke={COLORS.purpleLight} strokeOpacity="0.12" />
-      <ellipse cx="160" cy="70" rx="58" ry="22" fill="none" stroke={COLORS.purpleLight} strokeOpacity="0.1" strokeDasharray="4 5" />
+      <ellipse cx="160" cy="70" rx="86" ry="34" fill="none" stroke={VISUAL_VARS.purple} strokeOpacity="0.16" />
+      <ellipse cx="160" cy="70" rx="58" ry="22" fill="none" stroke={VISUAL_VARS.purple} strokeOpacity="0.14" strokeDasharray="4 5" />
 
       {claims.map((claim, index) => (
         <g key={claim.label}>
@@ -46,10 +51,10 @@ export default function RedOakVisual() {
             width="54"
             height="18"
             rx="9"
-            fill={COLORS.purple}
+            fill={VISUAL_VARS.purple}
             fillOpacity="0.08"
-            stroke={COLORS.purpleLight}
-            strokeOpacity="0.16"
+            stroke={VISUAL_VARS.purple}
+            strokeOpacity="0.24"
           />
           <text
             x={claim.x + 27}
@@ -57,7 +62,7 @@ export default function RedOakVisual() {
             textAnchor="middle"
             fontFamily={CHART_MONO}
             fontSize="8.5"
-            fill="#ddd9ff"
+            fill={VISUAL_VARS.labelOnFillMuted}
           >
             {claim.label}
           </text>
@@ -68,21 +73,21 @@ export default function RedOakVisual() {
               'M 60 88 C 84 88, 102 84, 126 78'
             ][index]}
             fill="none"
-            stroke={COLORS.purpleLight}
-            strokeOpacity="0.32"
+            stroke={VISUAL_VARS.purple}
+            strokeOpacity="0.46"
             strokeWidth="1.1"
           />
         </g>
       ))}
 
-      <path d="M92 34 Q128 48 160 70" fill="none" stroke={COLORS.purpleLight} strokeOpacity="0.78" strokeWidth="1.6" />
-      <path d="M228 34 Q194 48 160 70" fill="none" stroke={COLORS.blueLight} strokeOpacity="0.72" strokeWidth="1.6" />
-      <path d="M92 106 Q128 92 160 70" fill="none" stroke={COLORS.tealLight} strokeOpacity="0.72" strokeWidth="1.6" />
-      <path d="M228 106 Q194 92 160 70" fill="none" stroke={COLORS.purpleLight} strokeOpacity="0.78" strokeWidth="1.6" />
+      <path d="M92 34 Q128 48 160 70" fill="none" stroke={VISUAL_VARS.purple} strokeOpacity="0.82" strokeWidth="1.6" />
+      <path d="M228 34 Q194 48 160 70" fill="none" stroke={VISUAL_VARS.blue} strokeOpacity="0.78" strokeWidth="1.6" />
+      <path d="M92 106 Q128 92 160 70" fill="none" stroke={VISUAL_VARS.teal} strokeOpacity="0.78" strokeWidth="1.6" />
+      <path d="M228 106 Q194 92 160 70" fill="none" stroke={VISUAL_VARS.purple} strokeOpacity="0.82" strokeWidth="1.6" />
 
       <circle cx="160" cy="70" r="34" fill="url(#redoak-core)" />
-      <circle cx="160" cy="70" r="28" fill={COLORS.purple} fillOpacity="0.1" stroke={COLORS.purple} strokeOpacity="0.24" />
-      <circle cx="160" cy="70" r="22" fill={COLORS.purple} fillOpacity="0.18" stroke={COLORS.purpleLight} strokeOpacity="0.4" />
+      <circle cx="160" cy="70" r="28" fill={VISUAL_VARS.purple} fillOpacity="0.12" stroke={VISUAL_VARS.purple} strokeOpacity="0.32" />
+      <circle cx="160" cy="70" r="22" fill={VISUAL_VARS.purple} fillOpacity="0.22" stroke={VISUAL_VARS.purple} strokeOpacity="0.48" />
       <text
         x="160"
         y="66"
@@ -90,7 +95,7 @@ export default function RedOakVisual() {
         fontFamily={CHART_SANS}
         fontSize="10"
         fontWeight="600"
-        fill="#f0ecff"
+        fill={VISUAL_VARS.labelOnFill}
       >
         Consensus
       </text>
@@ -100,22 +105,22 @@ export default function RedOakVisual() {
         textAnchor="middle"
         fontFamily={CHART_MONO}
         fontSize="8.5"
-        fill="#d8d2ff"
+        fill={VISUAL_VARS.labelOnFillMuted}
       >
         vote / verify
       </text>
 
       {models.map((node) => (
         <g key={node.label}>
-          <circle cx={node.cx} cy={node.cy} r="15" fill={node.stroke} fillOpacity="0.08" />
+          <circle cx={node.cx} cy={node.cy} r="15" fill={node.stroke} fillOpacity="0.12" />
           <circle
             cx={node.cx}
             cy={node.cy}
             r="12"
             fill={node.stroke}
-            fillOpacity="0.18"
+            fillOpacity="0.22"
             stroke={node.stroke}
-            strokeOpacity="0.9"
+            strokeOpacity="0.92"
             strokeWidth="0.9"
           />
           <text
@@ -124,7 +129,7 @@ export default function RedOakVisual() {
             textAnchor="middle"
             fontFamily={CHART_SANS}
             fontSize="10"
-            fill="#f0ecff"
+            fill={VISUAL_VARS.labelOnFill}
           >
             {node.label}
           </text>
@@ -132,34 +137,34 @@ export default function RedOakVisual() {
       ))}
 
       {[
-        { cx: 126, cy: 52 },
-        { cx: 126, cy: 78 },
-        { cx: 194, cy: 52 },
-        { cx: 194, cy: 88 },
-        { cx: 140, cy: 44 },
-        { cx: 208, cy: 96 }
+        { cx: 126, cy: 52, fill: VISUAL_VARS.purple },
+        { cx: 126, cy: 78, fill: VISUAL_VARS.teal },
+        { cx: 194, cy: 52, fill: VISUAL_VARS.blue },
+        { cx: 194, cy: 88, fill: VISUAL_VARS.teal },
+        { cx: 140, cy: 44, fill: VISUAL_VARS.purple },
+        { cx: 208, cy: 96, fill: VISUAL_VARS.blue }
       ].map((dot, index) => (
         <circle
           key={index}
           cx={dot.cx}
           cy={dot.cy}
           r="2.2"
-          fill={index % 2 === 0 ? COLORS.purpleLight : COLORS.tealLight}
-          fillOpacity="0.7"
+          fill={dot.fill}
+          fillOpacity="0.82"
         />
       ))}
 
-      <path d="M194 70 C 214 70, 230 70, 250 70" fill="none" stroke={COLORS.purpleLight} strokeOpacity="0.38" strokeWidth="1.2" />
-      <rect x="254" y="44" width="58" height="50" rx="12" fill={COLORS.purple} fillOpacity="0.08" stroke={COLORS.purpleLight} strokeOpacity="0.12" />
-      <text x="283" y="57" textAnchor="middle" fontFamily={CHART_MONO} fontSize="9" fill="#d8d2ff">
+      <path d="M194 70 C 214 70, 230 70, 250 70" fill="none" stroke={VISUAL_VARS.purple} strokeOpacity="0.48" strokeWidth="1.2" />
+      <rect x="254" y="44" width="58" height="50" rx="12" fill={VISUAL_VARS.purple} fillOpacity="0.08" stroke={VISUAL_VARS.purple} strokeOpacity="0.18" />
+      <text x="283" y="57" textAnchor="middle" fontFamily={CHART_MONO} fontSize="9" fill={VISUAL_VARS.labelOnFillMuted}>
         ↓ halluc.
       </text>
-      <text x="283" y="69" textAnchor="middle" fontFamily={CHART_MONO} fontSize="9" fill="#d8d2ff">
+      <text x="283" y="69" textAnchor="middle" fontFamily={CHART_MONO} fontSize="9" fill={VISUAL_VARS.labelOnFillMuted}>
         rate
       </text>
-      <rect x="266" y="76" width="34" height="4" rx="2" fill={COLORS.purpleLight} fillOpacity="0.24" />
-      <rect x="266" y="83" width="26" height="4" rx="2" fill={COLORS.tealLight} fillOpacity="0.4" />
-      <rect x="266" y="90" width="18" height="4" rx="2" fill={COLORS.blueLight} fillOpacity="0.32" />
+      <rect x="266" y="76" width="34" height="4" rx="2" fill={VISUAL_VARS.purple} fillOpacity="0.36" />
+      <rect x="266" y="83" width="26" height="4" rx="2" fill={VISUAL_VARS.teal} fillOpacity="0.56" />
+      <rect x="266" y="90" width="18" height="4" rx="2" fill={VISUAL_VARS.blue} fillOpacity="0.46" />
     </svg>
   );
 }

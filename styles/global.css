@@ -31,6 +31,32 @@ body {
   scroll-margin-top: 1.125rem;
 }
 
+.experience-visual {
+  color: #4a574d;
+  --experience-visual-purple: #534ab7;
+  --experience-visual-blue: #378add;
+  --experience-visual-teal: #1d9e75;
+  --experience-visual-amber: #ba7517;
+  --experience-visual-green: #639922;
+  --experience-visual-red: #e24b4a;
+  --experience-visual-gray: #888780;
+  --experience-visual-label-on-fill: #1c2632;
+  --experience-visual-label-on-fill-muted: #385168;
+}
+
+.dark .experience-visual {
+  color: #8b9b8e;
+  --experience-visual-purple: #afa9ec;
+  --experience-visual-blue: #b5d4f4;
+  --experience-visual-teal: #5dcaa5;
+  --experience-visual-amber: #ef9f27;
+  --experience-visual-green: #8bbf45;
+  --experience-visual-red: #ff8b8a;
+  --experience-visual-gray: #d3d1c7;
+  --experience-visual-label-on-fill: #f0ecff;
+  --experience-visual-label-on-fill-muted: #d8d2ff;
+}
+
 @layer components {
   .glass-button,
   .glass-icon-button {

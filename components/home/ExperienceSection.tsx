@@ -30,7 +30,7 @@ export default function ExperienceSection() {
 
 function SectionLabel({ children }: PropsWithChildren) {
   return (
-    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-gray-500 dark:text-gray-400">
+    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-gray-600 dark:text-gray-400">
       {children}
     </p>
   );

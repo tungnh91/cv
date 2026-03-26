@@ -39,7 +39,7 @@ export default function ExperienceRow({
             <span className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
               {item.role}
             </span>
-            <span className="font-mono text-xs uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">
+            <span className="font-mono text-xs uppercase tracking-[0.18em] text-gray-600 dark:text-gray-400">
               {item.years}
             </span>
           </div>
@@ -65,7 +65,7 @@ export default function ExperienceRow({
 
 function TagPill({ children }: PropsWithChildren) {
   return (
-    <span className="rounded-md border border-gray-200 bg-gray-50 px-2.5 py-1 font-mono text-[11px] text-gray-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400">
+    <span className="rounded-md border border-gray-200 bg-gray-50 px-2.5 py-1 font-mono text-[11px] text-gray-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400">
       {children}
     </span>
   );

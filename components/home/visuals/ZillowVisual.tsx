@@ -1,4 +1,9 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  COLORS,
+  EXPERIENCE_VISUAL_CLASS
+} from './constants';
 
 export default function ZillowVisual() {
   const rows = [
@@ -9,7 +14,7 @@ export default function ZillowVisual() {
   ];
 
   return (
-    <svg viewBox="0 0 320 112" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 112" className={EXPERIENCE_VISUAL_CLASS}>
       <text
         x="0"
         y="16"

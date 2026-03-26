@@ -1,8 +1,14 @@
-import { CHART_MONO, CHART_SANS, COLORS } from './constants';
+import {
+  CHART_MONO,
+  CHART_SANS,
+  COLORS,
+  EXPERIENCE_VISUAL_CLASS,
+  VISUAL_VARS
+} from './constants';
 
 export default function MercedesVisual() {
   return (
-    <svg viewBox="0 0 320 132" className="w-full text-gray-500 dark:text-gray-400">
+    <svg viewBox="0 0 320 132" className={EXPERIENCE_VISUAL_CLASS}>
       <defs>
         <marker
           id="mercedes-arrow"
@@ -12,7 +18,7 @@ export default function MercedesVisual() {
           refY="4"
           orient="auto"
         >
-          <path d="M0,0 L8,4 L0,8" fill={COLORS.tealLight} />
+          <path d="M0,0 L8,4 L0,8" fill={VISUAL_VARS.teal} />
         </marker>
       </defs>
 
@@ -45,11 +51,11 @@ export default function MercedesVisual() {
             width={node.width}
             height="20"
             rx="4"
-            fill={COLORS.tealLight}
-            fillOpacity="0.2"
-            stroke={COLORS.tealLight}
-            strokeOpacity="0.85"
-            strokeWidth="0.8"
+            fill={VISUAL_VARS.teal}
+            fillOpacity="0.14"
+            stroke={VISUAL_VARS.teal}
+            strokeOpacity="0.92"
+            strokeWidth="0.9"
           />
           <text
             x={node.x + node.width / 2}
@@ -57,7 +63,7 @@ export default function MercedesVisual() {
             textAnchor="middle"
             fontFamily={CHART_MONO}
             fontSize="10"
-            fill="#c9f2e2"
+            fill={VISUAL_VARS.labelOnFill}
           >
             {node.label}
           </text>
@@ -67,8 +73,9 @@ export default function MercedesVisual() {
               y1="42"
               x2={arr[index + 1].x - 6}
               y2="42"
-              stroke={COLORS.tealLight}
-              strokeWidth="0.9"
+              stroke={VISUAL_VARS.teal}
+              strokeOpacity="0.9"
+              strokeWidth="1"
               markerEnd="url(#mercedes-arrow)"
             />
           ) : null}
@@ -89,7 +96,7 @@ export default function MercedesVisual() {
         After
       </text>
       <rect x="86" y="114" width="176" height="16" rx="8" fill="currentColor" opacity="0.08" />
-      <rect x="86" y="114" width="64" height="16" rx="8" fill={COLORS.tealLight} fillOpacity="0.85" />
+      <rect x="86" y="114" width="64" height="16" rx="8" fill={VISUAL_VARS.teal} fillOpacity="0.88" />
     </svg>
   );
 }
