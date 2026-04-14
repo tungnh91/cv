@@ -4,7 +4,6 @@ import type { ExperienceVisualization } from 'data/home';
 
 import AppleVisual from './visuals/AppleVisual';
 import FacebookVisual from './visuals/FacebookVisual';
-import HackReactorVisual from './visuals/HackReactorVisual';
 import MercedesVisual from './visuals/MercedesVisual';
 import NobleHouseVisual from './visuals/NobleHouseVisual';
 import RedOakVisual from './visuals/RedOakVisual';
@@ -17,7 +16,6 @@ const EXPERIENCE_VISUALS: Record<ExperienceVisualization, ComponentType> = {
   rivian: RivianVisual,
   facebook: FacebookVisual,
   mercedes: MercedesVisual,
-  hackreactor: HackReactorVisual,
   apple: AppleVisual,
   noblehouse: NobleHouseVisual
 };

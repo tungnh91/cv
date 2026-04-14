@@ -12,7 +12,6 @@ export type ExperienceVisualization =
   | 'rivian'
   | 'facebook'
   | 'mercedes'
-  | 'hackreactor'
   | 'apple'
   | 'noblehouse';
 
@@ -82,15 +81,6 @@ export const experienceRows: readonly ExperienceItem[] = [
       'Shipped NLP voice backends for production cars and improved response latency.',
     tags: ['NLP', 'Voice UI', 'Go', 'Node.js', 'GCP'],
     visualization: 'mercedes'
-  },
-  {
-    company: 'Hack Reactor',
-    role: 'Hacker in Residence',
-    years: '2017',
-    summary:
-      'Taught 80-student cohorts algorithms, Node, async workflows, and cloud deployment.',
-    tags: ['Teaching', 'Algorithms', 'Node.js', 'Interviews'],
-    visualization: 'hackreactor'
   },
   {
     company: 'Apple',
